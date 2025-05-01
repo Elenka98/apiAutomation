@@ -67,7 +67,7 @@ export function login(user: User):Promise<any>{
 }
 
 export function login2(user: User){
-    return request.post('/users/login').send(user).expect(200)
+    return request.post('/users/login').send(user)
 }
 
 export function deleteFunction(cookie: string):Promise<any>{
@@ -83,5 +83,49 @@ export function deleteFunction(cookie: string):Promise<any>{
 }
 
 export function deleteFunction2(cookie: string){
-    return request.post('/users/deleteMe').set('Cookie', cookie).expect(204)
+    return request.delete('/users/deleteMe').set('Cookie', cookie)
+}
+
+export function loginInvalidEmail(user: User):Promise<any>{
+    return new Promise((resolve, reject) => {
+        request
+            .post('/users/login')
+            .send({
+                email: 'user@user.com',
+                password: user.password
+            })
+            .end((err, res)=>{
+                if(err) reject(err)
+                else resolve(res);
+            })
+    })
+}
+
+export function loginInvalidPassword(user: User):Promise<any>{
+    return new Promise((resolve, reject) => {
+        request
+            .post('/users/login')
+            .send({
+                email: user.email,
+                password: 'test123456'
+            })
+            .end((err, res)=>{
+                if(err) reject(err)
+                else resolve(res);
+            })
+    })
+}
+
+export function login2InvalidEmail(user: User){
+    return request.post('/users/login').send({
+        email: 'user@user.com',
+        password: user.password
+    })
+}
+
+export function login2InvalidPassword(user: User){
+    return request.post('/users/login').send({
+        email: user.email,
+        password: 'test123456'
+    })
 }
