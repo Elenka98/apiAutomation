@@ -158,3 +158,71 @@ export function shortPasswordHW(user: User):Promise<any>{
             })
     })
 }
+
+export function withoutName2(user: User){
+    return request.post('/users/signup').send({
+        email: user.email,
+        password: user.password,
+        passwordConfirm: user.passwordConfirm
+    })
+}
+
+export function withoutPassword2(user: User){
+    return request.post('/users/signup').send({
+        name: user.name,
+        email: user.email,
+        passwordConfirm: user.passwordConfirm
+    })
+}
+
+export function withoutPasswordConfirm2(user: User){
+    return request.post('/users/signup').send({
+        name: user.name,
+        email: user.email,
+        password:  user.password
+    })
+}
+
+export function withoutEmail2(user: User){
+    return request.post('/users/signup').send({
+        name: user.name,
+        password:  user.password,
+        passwordConfirm: user.passwordConfirm
+    })
+}
+
+export function differentPasswords2(user: User){
+    return request.post('/users/signup').send({
+        name: user.name,
+        email: user.email,
+        password: 'test12345',
+        passwordConfirm: 'mypassword123'
+    })
+}
+
+export function usedEmail2(user: User){
+    return request.post('/users/signup').send({
+        name: user.name,
+        email: "test1@example.com",
+        password: user.password,
+        passwordConfirm: user.passwordConfirm
+    })
+}
+
+export function invalidEmail2(user: User){
+    return request.post('/users/signup').send({
+        name: user.name,
+        email: 'user.user.com',
+        password: user.password,
+        passwordConfirm: user.passwordConfirm
+    })
+}
+
+export function shortPassword2(user: User){
+    return request.post('/users/signup').send({
+        name: user.name,
+        email: user.email,
+        password: 'myp4',
+        passwordConfirm: 'myp4'
+    })
+}
