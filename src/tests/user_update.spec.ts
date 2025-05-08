@@ -1,7 +1,8 @@
-import {deleteFunction, getUser, login, signUp} from "../../helper/user";
+import {deleteFunction, getUser, login, signUp, userUpdateName, userUpdatePhoto} from "../../helper/user";
 import {User} from "../../helper/interface";
 let user: User;
-let cookie: string;
+export let cookie: string;
+
 import * as supertest from 'supertest';
 
 const request = supertest('http://localhost:8001/api/v1')
@@ -26,20 +27,12 @@ describe('USER UPDATE - /users/updateMe', () => {
     })
 
     it('Should update the user and email', async () => {
-        const res = await request
-            .patch('/users/updateMe')
-            .set('Cookie', cookie)
-            .send({
-                name: "John Doe"
-            })
+        const res = await userUpdateName(user)
         expect(res.statusCode).toBe(200)
     })
 
-    it('Should update the user and email', async () => {
-        const resPhoto = await request
-            .patch('/users/updateMe')
-            .set('Cookie', cookie)
-            .attach('photo', 'data/photo/pasv.png')
+    it('Should update the Photo', async () => {
+        const resPhoto = await userUpdatePhoto(user)
         expect(resPhoto.statusCode).toBe(200)
     })
 })
