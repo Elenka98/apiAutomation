@@ -2,6 +2,7 @@ import {deleteFunction, getUser, login, signUp, userUpdateName, userUpdatePhoto}
 import {User} from "../../helper/interface";
 let user: User;
 export let cookie: string;
+
 import * as supertest from 'supertest';
 
 const request = supertest('http://localhost:8001/api/v1')
