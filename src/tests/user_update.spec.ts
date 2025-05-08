@@ -30,7 +30,7 @@ describe('USER UPDATE - /users/updateMe', () => {
         expect(res.statusCode).toBe(200)
     })
 
-    it('Should update the user and email', async () => {
+    it('Should update the Photo', async () => {
         const resPhoto = await userUpdatePhoto(user)
         expect(resPhoto.statusCode).toBe(200)
     })
