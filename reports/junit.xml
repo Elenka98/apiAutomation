@@ -1,53 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="24" failures="0" errors="0" time="4.375">
-  <testsuite name="NEGATIVE TESTING - VERSION 2" errors="0" failures="0" skipped="0" timestamp="2025-05-02T20:32:15" time="4.079" tests="24">
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify sign up without Name" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify sign up without Name" time="0.048">
+<testsuites name="jest tests" tests="8" failures="0" errors="0" time="2.662">
+  <testsuite name="USER SIGN UP - NEGATIVE TESTING" errors="0" failures="0" skipped="0" timestamp="2025-05-08T18:05:04" time="2.417" tests="8">
+    <testcase classname="USER SIGN UP - NEGATIVE TESTING Verify sign up without Name" name="USER SIGN UP - NEGATIVE TESTING Verify sign up without Name" time="0.029">
     </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify sign up without Password" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify sign up without Password" time="0.008">
+    <testcase classname="USER SIGN UP - NEGATIVE TESTING Verify sign up without Password" name="USER SIGN UP - NEGATIVE TESTING Verify sign up without Password" time="0.004">
     </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify sign up without PasswordConfirm" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify sign up without PasswordConfirm" time="0.008">
+    <testcase classname="USER SIGN UP - NEGATIVE TESTING Verify sign up without PasswordConfirm" name="USER SIGN UP - NEGATIVE TESTING Verify sign up without PasswordConfirm" time="0.004">
     </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify sign up without Email" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify sign up without Email" time="0.009">
+    <testcase classname="USER SIGN UP - NEGATIVE TESTING Verify sign up without Email" name="USER SIGN UP - NEGATIVE TESTING Verify sign up without Email" time="0.005">
     </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify with with different passwords" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify with with different passwords" time="0.022">
+    <testcase classname="USER SIGN UP - NEGATIVE TESTING Verify with with different passwords" name="USER SIGN UP - NEGATIVE TESTING Verify with with different passwords" time="0.008">
     </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify if the email already used" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify if the email already used" time="0.98">
+    <testcase classname="USER SIGN UP - NEGATIVE TESTING Verify if the email already used" name="USER SIGN UP - NEGATIVE TESTING Verify if the email already used" time="0.374">
     </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify with Invalid Email" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify with Invalid Email" time="0.007">
+    <testcase classname="USER SIGN UP - NEGATIVE TESTING Verify with Invalid Email" name="USER SIGN UP - NEGATIVE TESTING Verify with Invalid Email" time="0.008">
     </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify with short password" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - async / await Verify with short password" time="0.005">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify sign up without Name" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify sign up without Name" time="0.006">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify sign up without Password" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify sign up without Password" time="0.005">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify sign up without PasswordConfirm" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify sign up without PasswordConfirm" time="0.004">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify sign up without Email" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify sign up without Email" time="0.006">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify with different passwords" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify with different passwords" time="0.005">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify if the email already used" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify if the email already used" time="0.35">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify with Invalid Email" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify with Invalid Email" time="0.005">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify with short password" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .then Verify with short password" time="0.005">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify sign up without Name" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify sign up without Name" time="0.005">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify sign up without Password" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify sign up without Password" time="0.004">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify sign up without PasswordConfirm" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify sign up without PasswordConfirm" time="0.004">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify sign up without Email" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify sign up without Email" time="0.004">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify with different passwords" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify with different passwords" time="0.006">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify if the email already used" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify if the email already used" time="0.346">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify with Invalid Email" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify with Invalid Email" time="0.006">
-    </testcase>
-    <testcase classname="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify with short password" name="NEGATIVE TESTING - VERSION 2 NEGATIVE TESTING - .end Verify with short password" time="0.004">
+    <testcase classname="USER SIGN UP - NEGATIVE TESTING Verify with short password" name="USER SIGN UP - NEGATIVE TESTING Verify with short password" time="0.007">
     </testcase>
   </testsuite>
 </testsuites>
