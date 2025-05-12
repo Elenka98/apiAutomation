@@ -10,7 +10,7 @@ export function createTour(): Promise<any> {
           .post('/tours')
           .set('Cookie', cookie)
           .send({
-              name: "TourForn24",
+              name: "TourForn11",
               duration: 10,
               description: "Could be",
               maxGroupSize: 10,

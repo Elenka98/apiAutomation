@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="10" failures="0" errors="0" time="3.269">
-  <testsuite name="USER UPDATE - /users/updateMe" errors="0" failures="0" skipped="9" timestamp="2025-05-10T02:37:27" time="2.944" tests="10">
+<testsuites name="jest tests" tests="10" failures="0" errors="0" time="2.902">
+  <testsuite name="USER UPDATE - /users/updateMe" errors="0" failures="0" skipped="9" timestamp="2025-05-12T02:43:19" time="2.654" tests="10">
     <testcase classname="USER UPDATE - /users/updateMe Should update the user and email" name="USER UPDATE - /users/updateMe Should update the user and email" time="0">
       <skipped/>
     </testcase>
@@ -28,7 +28,7 @@
     <testcase classname="HOMEWORK TESTING Ensure login still works after updates" name="HOMEWORK TESTING Ensure login still works after updates" time="0">
       <skipped/>
     </testcase>
-    <testcase classname="CREATE TOUR Create tour" name="CREATE TOUR Create tour" time="0.65">
+    <testcase classname="CREATE TOUR Create tour" name="CREATE TOUR Create tour" time="0.236">
     </testcase>
   </testsuite>
 </testsuites>
