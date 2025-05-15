@@ -6,7 +6,7 @@ const { MongoClient, Db } = require("mongodb");
 const dotenv = require("dotenv");
 dotenv.config();
 
-describe.only('MONGODB CONNECTION', () => {
+describe('MONGODB CONNECTION', () => {
     let connection: typeof MongoClient;
     let db: typeof Db
     beforeAll(async () => {

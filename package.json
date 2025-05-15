@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "user_mongo": "npx jest mongo_findUser.spec.ts"
+    "user_mongo": "npx jest mongo_findUser.spec.ts",
+    "tour_mongo": "npx jest mongo_findTour.spec.ts"
   },
   "keywords": [],
   "author": "",

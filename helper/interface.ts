@@ -16,7 +16,7 @@ export interface Tour {
     slug?: string;
     duration: number;
     maxGroupSize: number;
-    difficulty: string;
+    difficulty: 'easy' | 'medium' | 'difficult';
     ratingsAverage: number;
     ratingsQuantity: number;
     price: number;
@@ -26,9 +26,15 @@ export interface Tour {
     imageCoVer: string;
     images: string[];
     createdAt: Date;
-    startDates: Date[];
+    startDates: string[];
     secretTour: Boolean;
-    startLocation: JSON;
-    locations: JSON;
-    guides: Object[];
+    startLocation: {
+        type: "Point";
+        coordinates: [number, number];
+    };
+    locations: {
+        type: "Point";
+        coordinates: [number, number];
+    };
+    guides: string[];
 }

@@ -15,12 +15,13 @@ export const errorMessagesTour = {
     highDiscountPrice: "Discount price should be below regular price",
     missingSummary: "A tour must have a summary",
     missingImage: "A tour must have a cover image",
-    missingStartLocation: "Invalid location format"
+    missingStartLocation: "Invalid location format",
+    userUnauthorized: "You are not logged in! Please log in to get access."
 }
 
 export const tourHomeWork = {
     name: faker.lorem.words(4),
-    duration: faker.number.int({ min: 1, max: 14 }),
+    duration: faker.number.int({ min: 3, max: 20 }),
     description: faker.lorem.sentence(),
     maxGroupSize: faker.number.int({ min: 5, max: 30 }),
     summary: faker.lorem.sentence(),
@@ -152,4 +153,422 @@ export function missingDifficulty(): Promise<any>{
                 else resolve(res);
             })
     })
+}
+
+export function invalidDifficultyHW(): Promise<any>{
+    return new Promise((resolve, reject) => {
+        request
+            .post('/tours')
+            .set('Cookie', cookieHomeTour)
+            .send({
+                name: tourHomeWork.name,
+                duration: tourHomeWork.duration,
+                description: tourHomeWork.description,
+                maxGroupSize: tourHomeWork.maxGroupSize,
+                summary: tourHomeWork.summary,
+                difficulty: 'frog',
+                price: tourHomeWork.price,
+                rating: tourHomeWork.rating,
+                imageCover: tourHomeWork.imageCover,
+                ratingsAverage: tourHomeWork.ratingsAverage,
+                guides: tourHomeWork.guides,
+                startDates: tourHomeWork.startDates,
+                startLocation: tourHomeWork.startLocation
+            })
+            .end((err, res) => {
+                if (err) reject(err);
+                else resolve(res);
+            })
+    })
+}
+
+export function invalidAverageRating(): Promise<any>{
+    return new Promise((resolve, reject) => {
+        request
+            .post('/tours')
+            .set('Cookie', cookieHomeTour)
+            .send({
+                name: tourHomeWork.name,
+                duration: tourHomeWork.duration,
+                description: tourHomeWork.description,
+                maxGroupSize: tourHomeWork.maxGroupSize,
+                summary: tourHomeWork.summary,
+                difficulty: 'easy',
+                price: tourHomeWork.price,
+                rating: tourHomeWork.rating,
+                imageCover: tourHomeWork.imageCover,
+                ratingsAverage: 9,
+                guides: tourHomeWork.guides,
+                startDates: tourHomeWork.startDates,
+                startLocation: tourHomeWork.startLocation
+            })
+            .end((err, res) => {
+                if (err) reject(err);
+                else resolve(res);
+            })
+    })
+}
+
+export function invalidPrice(): Promise<any>{
+    return new Promise((resolve, reject) => {
+        request
+            .post('/tours')
+            .set('Cookie', cookieHomeTour)
+            .send({
+                name: tourHomeWork.name,
+                duration: tourHomeWork.duration,
+                description: tourHomeWork.description,
+                maxGroupSize: tourHomeWork.maxGroupSize,
+                summary: tourHomeWork.summary,
+                difficulty: 'easy',
+                price: tourHomeWork.price,
+                priceDiscount: 5000,
+                rating: tourHomeWork.rating,
+                imageCover: tourHomeWork.imageCover,
+                ratingsAverage: tourHomeWork.ratingsAverage,
+                guides: tourHomeWork.guides,
+                startDates: tourHomeWork.startDates,
+                startLocation: tourHomeWork.startLocation
+            })
+            .end ((err, res) => {
+                if (err) reject(err);
+                else resolve(res);
+            })
+    })
+}
+
+export function missingSummaryHomeWork(): Promise<any>{
+    return new Promise((resolve, reject) => {
+        request
+            .post('/tours')
+            .set('Cookie', cookieHomeTour)
+            .send({
+                name: tourHomeWork.name,
+                duration: tourHomeWork.duration,
+                description: tourHomeWork.description,
+                maxGroupSize: tourHomeWork.maxGroupSize,
+                difficulty: 'easy',
+                price: tourHomeWork.price,
+                rating: tourHomeWork.rating,
+                imageCover: tourHomeWork.imageCover,
+                ratingsAverage: tourHomeWork.ratingsAverage,
+                guides: tourHomeWork.guides,
+                startDates: tourHomeWork.startDates,
+                startLocation: tourHomeWork.startLocation
+            })
+            .end ((err, res) => {
+                if (err) reject(err);
+                else resolve(res);
+            })
+    })
+}
+
+export function missingImageCover(): Promise<any>{
+    return new Promise((resolve, reject) => {
+        request
+            .post('/tours')
+            .set('Cookie', cookieHomeTour)
+            .send({
+                name: tourHomeWork.name,
+                duration: tourHomeWork.duration,
+                description: tourHomeWork.description,
+                maxGroupSize: tourHomeWork.maxGroupSize,
+                difficulty: 'easy',
+                price: tourHomeWork.price,
+                rating: tourHomeWork.rating,
+                summary: tourHomeWork.summary,
+                ratingsAverage: tourHomeWork.ratingsAverage,
+                guides: tourHomeWork.guides,
+                startDates: tourHomeWork.startDates,
+                startLocation: tourHomeWork.startLocation
+            })
+            .end ((err, res) => {
+                if (err) reject(err);
+                else resolve(res);
+            })
+    })
+}
+
+export function missingStartLocationHW(): Promise<any>{
+    return new Promise((resolve, reject) => {
+        request
+            .post('/tours')
+            .set('Cookie', cookieHomeTour)
+            .send({
+                name: tourHomeWork.name,
+                duration: tourHomeWork.duration,
+                description: tourHomeWork.description,
+                maxGroupSize: tourHomeWork.maxGroupSize,
+                difficulty: 'easy',
+                price: tourHomeWork.price,
+                rating: tourHomeWork.rating,
+                summary: tourHomeWork.summary,
+                ratingsAverage: tourHomeWork.ratingsAverage,
+                guides: tourHomeWork.guides,
+                imageCover: tourHomeWork.imageCover,
+                startDates: tourHomeWork.startDates
+            })
+            .end ((err, res) => {
+                if (err) reject(err);
+                else resolve(res);
+            })
+    })
+}
+
+export function userNotLogin(): Promise<any>{
+    return new Promise((resolve, reject) => {
+        request
+            .post('/tours')
+            .send({
+                name: tourHomeWork.name,
+                duration: tourHomeWork.duration,
+                description: tourHomeWork.description,
+                maxGroupSize: tourHomeWork.maxGroupSize,
+                difficulty: 'easy',
+                price: tourHomeWork.price,
+                rating: tourHomeWork.rating,
+                summary: tourHomeWork.summary,
+                ratingsAverage: tourHomeWork.ratingsAverage,
+                guides: tourHomeWork.guides,
+                imageCover: tourHomeWork.imageCover,
+                startDates: tourHomeWork.startDates,
+                startLocation: tourHomeWork.startLocation
+            })
+            .end ((err, res) => {
+                if (err) reject(err);
+                else resolve(res);
+            })
+    })
+}
+
+
+export function emptyRequestBody2(){
+    return request
+        .post('/tours')
+        .set('Cookie', cookieHomeTour)
+        .send({})
+}
+
+export function missingName2(){
+    return request
+        .post('/tours')
+        .set('Cookie', cookieHomeTour)
+        .send({
+            duration: tourHomeWork.duration,
+            description: tourHomeWork.description,
+            maxGroupSize: tourHomeWork.maxGroupSize,
+            summary: tourHomeWork.summary,
+            difficulty: tourHomeWork.difficulty,
+            price: tourHomeWork.price,
+            rating: tourHomeWork.rating,
+            imageCover: tourHomeWork.imageCover,
+            ratingsAverage: tourHomeWork.ratingsAverage,
+            guides: tourHomeWork.guides,
+            startDates: tourHomeWork.startDates,
+            startLocation: tourHomeWork.startLocation
+        })
+}
+
+export function missingDuration2(){
+    return request
+        .post('/tours')
+        .set('Cookie', cookieHomeTour)
+        .send({
+            name: tourHomeWork.name,
+            description: tourHomeWork.description,
+            maxGroupSize: tourHomeWork.maxGroupSize,
+            summary: tourHomeWork.summary,
+            difficulty: tourHomeWork.difficulty,
+            price: tourHomeWork.price,
+            rating: tourHomeWork.rating,
+            imageCover: tourHomeWork.imageCover,
+            ratingsAverage: tourHomeWork.ratingsAverage,
+            guides: tourHomeWork.guides,
+            startDates: tourHomeWork.startDates,
+            startLocation: tourHomeWork.startLocation
+        })
+}
+
+export function missingMaxSize2(){
+    return request
+        .post('/tours')
+        .set('Cookie', cookieHomeTour)
+        .send({
+            name: tourHomeWork.name,
+            duration: tourHomeWork.duration,
+            description: tourHomeWork.description,
+            summary: tourHomeWork.summary,
+            difficulty: tourHomeWork.difficulty,
+            price: tourHomeWork.price,
+            rating: tourHomeWork.rating,
+            imageCover: tourHomeWork.imageCover,
+            ratingsAverage: tourHomeWork.ratingsAverage,
+            guides: tourHomeWork.guides,
+            startDates: tourHomeWork.startDates,
+            startLocation: tourHomeWork.startLocation
+        })
+}
+
+export function missingDifficulty2(){
+    return request
+        .post('/tours')
+        .set('Cookie', cookieHomeTour)
+        .send({
+            name: tourHomeWork.name,
+            duration: tourHomeWork.duration,
+            description: tourHomeWork.description,
+            maxGroupSize: tourHomeWork.maxGroupSize,
+            summary: tourHomeWork.summary,
+            price: tourHomeWork.price,
+            rating: tourHomeWork.rating,
+            imageCover: tourHomeWork.imageCover,
+            ratingsAverage: tourHomeWork.ratingsAverage,
+            guides: tourHomeWork.guides,
+            startDates: tourHomeWork.startDates,
+            startLocation: tourHomeWork.startLocation
+        })
+}
+
+export function invalidDifficulty2(){
+    return request
+        .post('/tours')
+        .set('Cookie', cookieHomeTour)
+        .send({
+            name: tourHomeWork.name,
+            duration: tourHomeWork.duration,
+            description: tourHomeWork.description,
+            maxGroupSize: tourHomeWork.maxGroupSize,
+            summary: tourHomeWork.summary,
+            difficulty: 'frog',
+            price: tourHomeWork.price,
+            rating: tourHomeWork.rating,
+            imageCover: tourHomeWork.imageCover,
+            ratingsAverage: tourHomeWork.ratingsAverage,
+            guides: tourHomeWork.guides,
+            startDates: tourHomeWork.startDates,
+            startLocation: tourHomeWork.startLocation
+        })
+}
+
+export function invalidRating2(){
+    return request
+        .post('/tours')
+        .set('Cookie', cookieHomeTour)
+        .send({
+            name: tourHomeWork.name,
+            duration: tourHomeWork.duration,
+            description: tourHomeWork.description,
+            maxGroupSize: tourHomeWork.maxGroupSize,
+            summary: tourHomeWork.summary,
+            difficulty: 'easy',
+            price: tourHomeWork.price,
+            rating: tourHomeWork.rating,
+            imageCover: tourHomeWork.imageCover,
+            ratingsAverage: 9,
+            guides: tourHomeWork.guides,
+            startDates: tourHomeWork.startDates,
+            startLocation: tourHomeWork.startLocation
+        })
+}
+
+export function invalidPrice2(){
+    return request
+        .post('/tours')
+        .set('Cookie', cookieHomeTour)
+        .send({
+            name: tourHomeWork.name,
+            duration: tourHomeWork.duration,
+            description: tourHomeWork.description,
+            maxGroupSize: tourHomeWork.maxGroupSize,
+            summary: tourHomeWork.summary,
+            difficulty: 'easy',
+            price: tourHomeWork.price,
+            priceDiscount: 5000,
+            rating: tourHomeWork.rating,
+            imageCover: tourHomeWork.imageCover,
+            ratingsAverage: tourHomeWork.ratingsAverage,
+            guides: tourHomeWork.guides,
+            startDates: tourHomeWork.startDates,
+            startLocation: tourHomeWork.startLocation
+        })
+}
+
+export function missingSummary2(){
+    return request
+        .post('/tours')
+        .set('Cookie', cookieHomeTour)
+        .send({
+            name: tourHomeWork.name,
+            duration: tourHomeWork.duration,
+            description: tourHomeWork.description,
+            maxGroupSize: tourHomeWork.maxGroupSize,
+            difficulty: 'easy',
+            price: tourHomeWork.price,
+            rating: tourHomeWork.rating,
+            imageCover: tourHomeWork.imageCover,
+            ratingsAverage: tourHomeWork.ratingsAverage,
+            guides: tourHomeWork.guides,
+            startDates: tourHomeWork.startDates,
+            startLocation: tourHomeWork.startLocation
+        })
+}
+
+export function missingImage2(){
+    return request
+        .post('/tours')
+        .set('Cookie', cookieHomeTour)
+        .send({
+            name: tourHomeWork.name,
+            duration: tourHomeWork.duration,
+            description: tourHomeWork.description,
+            maxGroupSize: tourHomeWork.maxGroupSize,
+            difficulty: 'easy',
+            price: tourHomeWork.price,
+            rating: tourHomeWork.rating,
+            summary: tourHomeWork.summary,
+            ratingsAverage: tourHomeWork.ratingsAverage,
+            guides: tourHomeWork.guides,
+            startDates: tourHomeWork.startDates,
+            startLocation: tourHomeWork.startLocation
+        })
+}
+
+export function missingStartLocation2(){
+    return request
+        .post('/tours')
+        .set('Cookie', cookieHomeTour)
+        .send({
+            name: tourHomeWork.name,
+            duration: tourHomeWork.duration,
+            description: tourHomeWork.description,
+            maxGroupSize: tourHomeWork.maxGroupSize,
+            difficulty: 'easy',
+            price: tourHomeWork.price,
+            rating: tourHomeWork.rating,
+            summary: tourHomeWork.summary,
+            ratingsAverage: tourHomeWork.ratingsAverage,
+            guides: tourHomeWork.guides,
+            imageCover: tourHomeWork.imageCover,
+            startDates: tourHomeWork.startDates
+        })
+}
+
+export function userNotLogin2(){
+    return request
+        .post('/tours')
+        .send({
+            name: tourHomeWork.name,
+            duration: tourHomeWork.duration,
+            description: tourHomeWork.description,
+            maxGroupSize: tourHomeWork.maxGroupSize,
+            difficulty: 'easy',
+            price: tourHomeWork.price,
+            rating: tourHomeWork.rating,
+            summary: tourHomeWork.summary,
+            ratingsAverage: tourHomeWork.ratingsAverage,
+            guides: tourHomeWork.guides,
+            imageCover: tourHomeWork.imageCover,
+            startDates: tourHomeWork.startDates,
+            startLocation: tourHomeWork.startLocation
+        })
 }
