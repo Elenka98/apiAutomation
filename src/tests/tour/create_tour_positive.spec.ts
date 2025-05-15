@@ -6,7 +6,7 @@ import {User} from "../../../helper/interface";
 let userImport: User;
 const request = supertest('http://localhost:8001/api/v1')
 
-describe.only('CREATE TOUR', () => {
+describe('CREATE TOUR', () => {
     beforeAll(async () => {
         userImport = getUser('admin')
         const responseLogin = await signUp(userImport);

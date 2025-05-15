@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="11" failures="0" errors="0" time="4.479">
-  <testsuite name="USER UPDATE - /users/updateMe" errors="0" failures="0" skipped="9" timestamp="2025-05-13T03:11:58" time="4.157" tests="11">
+<testsuites name="jest tests" tests="22" failures="0" errors="0" time="2.661">
+  <testsuite name="USER UPDATE - /users/updateMe" errors="0" failures="0" skipped="21" timestamp="2025-05-15T04:20:49" time="2.427" tests="22">
     <testcase classname="USER UPDATE - /users/updateMe Should update the user and email" name="USER UPDATE - /users/updateMe Should update the user and email" time="0">
       <skipped/>
     </testcase>
@@ -28,9 +28,43 @@
     <testcase classname="HOMEWORK TESTING Ensure login still works after updates" name="HOMEWORK TESTING Ensure login still works after updates" time="0">
       <skipped/>
     </testcase>
-    <testcase classname="MONGODB CONNECTION Connect to the collection and find user" name="MONGODB CONNECTION Connect to the collection and find user" time="0.124">
+    <testcase classname="HOMEWORK TESTING Empty request body" name="HOMEWORK TESTING Empty request body" time="0">
+      <skipped/>
     </testcase>
-    <testcase classname="MONGODB CONNECTION Created new user with imported data" name="MONGODB CONNECTION Created new user with imported data" time="0.735">
+    <testcase classname="HOMEWORK TESTING Missing name" name="HOMEWORK TESTING Missing name" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="HOMEWORK TESTING Missing duration" name="HOMEWORK TESTING Missing duration" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="HOMEWORK TESTING Missing maxGroupSize" name="HOMEWORK TESTING Missing maxGroupSize" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="HOMEWORK TESTING Missing difficulty" name="HOMEWORK TESTING Missing difficulty" time="0.109">
+    </testcase>
+    <testcase classname="HOMEWORK TESTING Invalid difficulty" name="HOMEWORK TESTING Invalid difficulty" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="HOMEWORK TESTING Invalid rating (out of range)" name="HOMEWORK TESTING Invalid rating (out of range)" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="HOMEWORK TESTING Discount price higher than price" name="HOMEWORK TESTING Discount price higher than price" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="HOMEWORK TESTING Missing summary" name="HOMEWORK TESTING Missing summary" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="HOMEWORK TESTING Missing image cover" name="HOMEWORK TESTING Missing image cover" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="HOMEWORK TESTING Missing startLocation coordinates" name="HOMEWORK TESTING Missing startLocation coordinates" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="HOMEWORK TESTING Non-numeric startLocation coordinates" name="HOMEWORK TESTING Non-numeric startLocation coordinates" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="HOMEWORK TESTING Unauthorized user" name="HOMEWORK TESTING Unauthorized user" time="0">
+      <skipped/>
     </testcase>
   </testsuite>
 </testsuites>
