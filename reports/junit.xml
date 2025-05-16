@@ -1,39 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="12" failures="0" errors="0" time="4.428">
-  <testsuite name="USER UPDATE - /users/updateMe" errors="0" failures="0" skipped="10" timestamp="2025-05-15T22:26:18" time="4.201" tests="12">
-    <testcase classname="USER UPDATE - /users/updateMe Should update the user and email" name="USER UPDATE - /users/updateMe Should update the user and email" time="0">
-      <skipped/>
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="4.115">
+  <testsuite name="POSTS" errors="0" failures="0" skipped="0" timestamp="2025-05-16T02:09:22" time="3.754" tests="6">
+    <testcase classname="POSTS get request" name="POSTS get request" time="0.356">
     </testcase>
-    <testcase classname="USER UPDATE - /users/updateMe Should update the Photo" name="USER UPDATE - /users/updateMe Should update the Photo" time="0">
-      <skipped/>
+    <testcase classname="POSTS POST request" name="POSTS POST request" time="0.161">
     </testcase>
-    <testcase classname="HOMEWORK TESTING Reject password update via this route" name="HOMEWORK TESTING Reject password update via this route" time="0">
-      <skipped/>
+    <testcase classname="POSTS PATCH request with title version 1" name="POSTS PATCH request with title version 1" time="0.197">
     </testcase>
-    <testcase classname="HOMEWORK TESTING Reject updates without token" name="HOMEWORK TESTING Reject updates without token" time="0">
-      <skipped/>
+    <testcase classname="POSTS PATCH request with title version 2" name="POSTS PATCH request with title version 2" time="0.222">
     </testcase>
-    <testcase classname="HOMEWORK TESTING Reject invalid email format" name="HOMEWORK TESTING Reject invalid email format" time="0">
-      <skipped/>
+    <testcase classname="POSTS PATCH request with title version 3" name="POSTS PATCH request with title version 3" time="0.125">
     </testcase>
-    <testcase classname="HOMEWORK TESTING Reject requests with an invalid token" name="HOMEWORK TESTING Reject requests with an invalid token" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="HOMEWORK TESTING Successfully update the user and email" name="HOMEWORK TESTING Successfully update the user and email" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="HOMEWORK TESTING Successfully upload profile picture" name="HOMEWORK TESTING Successfully upload profile picture" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="HOMEWORK TESTING Ensure login still works after updates" name="HOMEWORK TESTING Ensure login still works after updates" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="CREATE TOUR Create tour" name="CREATE TOUR Create tour" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="MONGODB CONNECTION Connect to the collection and find tour" name="MONGODB CONNECTION Connect to the collection and find tour" time="0.119">
-    </testcase>
-    <testcase classname="MONGODB CONNECTION Created new tour with imported data" name="MONGODB CONNECTION Created new tour with imported data" time="0.32">
+    <testcase classname="POSTS DELETE request" name="POSTS DELETE request" time="0.138">
     </testcase>
   </testsuite>
 </testsuites>
