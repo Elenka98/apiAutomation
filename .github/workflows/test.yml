@@ -5,7 +5,7 @@ on:
     branches:
       - master
       - develop
-  pull request:
+  pull_request:
     branches:
       - master
       - develop
@@ -24,7 +24,7 @@ jobs:
           node-version: '18'
 
       - name: Install npm dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run Jest Test
         run: npx jest test.spec.ts
