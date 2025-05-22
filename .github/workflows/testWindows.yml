@@ -9,12 +9,11 @@ on:
     branches:
       - master
       - develop
-  schedule:
-    - cron: '0 0 * * *' # This means every day at 00:00 UTC
 
 jobs:
   jest-test-for-push:
-    runs-on: ubuntu-latest
+    name: Run Jest on Windows
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
