@@ -9,17 +9,11 @@ on:
     branches:
       - master
       - develop
-  schedule:
-    - cron: '0 0 * * *' # This means every day at 00:00 UTC
-  workflow_dispatch: # This enables manual trigger
 
 jobs:
   jest-test-for-push:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [ 18, 20 ]  # This is how you run on both versions
+    name: Run Jest on MacOS
+    runs-on: macos-latest
 
     steps:
       - name: Checkout code
@@ -28,7 +22,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '18'
 
       - name: Install npm dependencies
         run: npm install
