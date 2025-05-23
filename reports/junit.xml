@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="11" failures="0" errors="0" time="3.444">
-  <testsuite name="USER UPDATE - /users/updateMe" errors="0" failures="0" skipped="10" timestamp="2025-05-23T01:56:49" time="3.175" tests="11">
+<testsuites name="jest tests" tests="16" failures="0" errors="0" time="2.88">
+  <testsuite name="USER UPDATE - /users/updateMe" errors="0" failures="0" skipped="15" timestamp="2025-05-23T21:13:15" time="2.614" tests="16">
     <testcase classname="USER UPDATE - /users/updateMe Should update the user and email" name="USER UPDATE - /users/updateMe Should update the user and email" time="0">
       <skipped/>
     </testcase>
@@ -31,7 +31,22 @@
     <testcase classname="CREATE TOUR async/await Create tour" name="CREATE TOUR async/await Create tour" time="0">
       <skipped/>
     </testcase>
-    <testcase classname="CREATE TOUR async/await Get all tours" name="CREATE TOUR async/await Get all tours" time="0.335">
+    <testcase classname="CREATE TOUR async/await Get all tours" name="CREATE TOUR async/await Get all tours" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="CREATE TOUR async/await Get Tour By ID" name="CREATE TOUR async/await Get Tour By ID" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="CREATE TOUR async/await Update Tour" name="CREATE TOUR async/await Update Tour" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="CREATE TOUR async/await Delete Tour" name="CREATE TOUR async/await Delete Tour" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="CREATE TOUR async/await Get Tours Within a Radius" name="CREATE TOUR async/await Get Tours Within a Radius" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="CREATE TOUR async/await Get Distances to All Tours" name="CREATE TOUR async/await Get Distances to All Tours" time="0.12">
     </testcase>
   </testsuite>
 </testsuites>

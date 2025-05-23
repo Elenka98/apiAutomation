@@ -44,12 +44,53 @@ describe('CREATE TOUR', () => {
             expect(resTour.body.data.duration).toBe(10);
         })
 
-        it.only('Get all tours', async () => {
+        it('Get all tours', async () => {
             const getTour = await request
                 .get('/tours')
                 .set('Cookie', cookieRes)
                 .send({})
             expect(getTour.statusCode).toBe(200);
+        })
+
+        it('Get Tour By ID', async () => {
+            const getTourById = await request
+                .get('/tours/68229f20e31e8642244b73fa')
+                .set('Cookie', cookieRes)
+                .send({})
+            expect(getTourById.statusCode).toBe(200);
+        })
+
+        it('Update Tour', async () => {
+            const updateTour = await request
+                .patch('/tours/68229f20e31e8642244b73fa')
+                .set('Cookie', cookieRes)
+                .send({
+                    "maxGroupSize": 20
+                })
+            console.log(updateTour.body)
+            expect(updateTour.statusCode).toBe(200);
+        })
+
+        it('Delete Tour', async () => {
+            const deleteTour = await request
+                .delete('/tours/682669033897fd35e8ccf678')
+                .set('Cookie', cookieRes)
+            expect(deleteTour.statusCode).toBe(204);
+        })
+
+        it('Get Tours Within a Radius', async () => {
+            const getRadius = await request
+                .get('/tours/tours-within/3000/center/34.111745,-118.113491/unit/mi')
+                .set('Cookie', cookieRes)
+            expect(getRadius.statusCode).toBe(200);
+        })
+
+        it('Get Distances to All Tours', async () => {
+            const getDistances = await request
+                .get('/tours/distances/34.111745,-118.113491/unit/mi')
+                .set('Cookie', cookieRes)
+            console.log(getDistances.body)
+            expect(getDistances.statusCode).toBe(200);
         })
     })
 })
