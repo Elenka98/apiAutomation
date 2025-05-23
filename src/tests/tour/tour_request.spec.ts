@@ -64,9 +64,10 @@ describe('CREATE TOUR', () => {
             const updateTour = await request
                 .patch('/tours/68229f20e31e8642244b73fa')
                 .set('Cookie', cookieRes)
-                .send({
-                    "maxGroupSize": 20
-                })
+                .field(
+                    "maxGroupSize", 20
+                )
+                //.attach('imageCover', 'data/photo/pasv.png')
             console.log(updateTour.body)
             expect(updateTour.statusCode).toBe(200);
         })
