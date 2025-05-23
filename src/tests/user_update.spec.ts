@@ -6,7 +6,7 @@ export let cookie: string;
 import * as supertest from 'supertest';
 
 const request = supertest('http://localhost:8001/api/v1')
-describe.only('USER UPDATE - /users/updateMe', () => {
+describe('USER UPDATE - /users/updateMe', () => {
     beforeAll(async() => {
         user = getUser('admin');
 
