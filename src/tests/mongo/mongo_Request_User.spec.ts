@@ -94,22 +94,53 @@ describe('MONGODB', () => {
         console.log(count, 'count')
     })
 
-    it.only('Method distinct', async () => {
+    it('Method distinct', async () => {
         const users = db.collection('users');
         const distinctUser = await users.distinct('name')
         console.log(distinctUser, 'distinctUser')
+    })
+
+    it('Method update One', async () => {
+        const users = db.collection('users');
+        const updateUser = await users.updateOne(
+            {name: 'TestUserExample'},
+            {$set: {role: 'user'} })
+        console.log(updateUser, 'updateUser')
+    })
+
+    it('Method update Many', async () => {
+        const users = db.collection('users');
+        const updateManyUsers = await users.updateMany({ city: 'New York' }, { $set: { city: 'Los Angeles' } })
+        console.log(updateManyUsers, 'updateManyUsers')
+    })
+
+    it('Method replace One', async () => {
+        const users = db.collection('users');
+        const replaceUser = await users.replaceOne({name: 'TestUserExample'}, {name: 'ReplacedUser', email: 'replaced@user.com'})
+        console.log(replaceUser, 'replaceUser')
+    })
+
+    it('Method delete One', async () => {
+        const users= db.collection('users');
+        const deleteUser = await users.deleteOne({name: 'ReplacedUser'})
+        console.log(deleteUser, 'deleteUser')
+    })
+
+    it('Method delete Many', async () => {
+        const users= db.collection('users');
+        const deleteManyUsers = await users.deleteMany({active: true})
+        console.log(deleteManyUsers, 'deleteManyUsers')
+    })
+
+    it.only('Method aggregate', async () => {
+        const users = db.collection('users');
+        //const aggregateUsers= await users.aggregate([{ $group: {name: 'Test '}}])
     })
 
     it('Method find One', async () => {})
 
     it('Method find One', async () => {})
 
-    it('Method find One', async () => {})
-    it('Method find One', async () => {})
-    it('Method find One', async () => {})
-    it('Method find One', async () => {})
-    it('Method find One', async () => {})
-    it('Method find One', async () => {})
     it('Method find One', async () => {})
     it('Method find One', async () => {})
     it('Method find One', async () => {})

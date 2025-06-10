@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="28" failures="0" errors="0" time="3.851">
-  <testsuite name="USER UPDATE - /users/updateMe" errors="0" failures="0" skipped="27" timestamp="2025-06-08T19:21:01" time="3.594" tests="28">
+<testsuites name="jest tests" tests="28" failures="0" errors="0" time="3.66">
+  <testsuite name="USER UPDATE - /users/updateMe" errors="0" failures="0" skipped="27" timestamp="2025-06-10T18:53:41" time="3.411" tests="28">
     <testcase classname="USER UPDATE - /users/updateMe Should update the user and email" name="USER UPDATE - /users/updateMe Should update the user and email" time="0">
       <skipped/>
     </testcase>
@@ -49,22 +49,22 @@
     <testcase classname="MONGODB Method countDocuments" name="MONGODB Method countDocuments" time="0">
       <skipped/>
     </testcase>
-    <testcase classname="MONGODB Method distinct" name="MONGODB Method distinct" time="0.104">
-    </testcase>
-    <testcase classname="MONGODB Method find One" name="MONGODB Method find One" time="0">
+    <testcase classname="MONGODB Method distinct" name="MONGODB Method distinct" time="0">
       <skipped/>
     </testcase>
-    <testcase classname="MONGODB Method find One" name="MONGODB Method find One" time="0">
+    <testcase classname="MONGODB Method update One" name="MONGODB Method update One" time="0">
       <skipped/>
     </testcase>
-    <testcase classname="MONGODB Method find One" name="MONGODB Method find One" time="0">
+    <testcase classname="MONGODB Method update Many" name="MONGODB Method update Many" time="0">
       <skipped/>
     </testcase>
-    <testcase classname="MONGODB Method find One" name="MONGODB Method find One" time="0">
+    <testcase classname="MONGODB Method replace One" name="MONGODB Method replace One" time="0">
       <skipped/>
     </testcase>
-    <testcase classname="MONGODB Method find One" name="MONGODB Method find One" time="0">
+    <testcase classname="MONGODB Method delete One" name="MONGODB Method delete One" time="0">
       <skipped/>
+    </testcase>
+    <testcase classname="MONGODB Method delete Many" name="MONGODB Method delete Many" time="0.117">
     </testcase>
     <testcase classname="MONGODB Method find One" name="MONGODB Method find One" time="0">
       <skipped/>
