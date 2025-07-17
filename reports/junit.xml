@@ -1,52 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="16" failures="0" errors="0" time="3.784">
-  <testsuite name="USER UPDATE - /users/updateMe" errors="0" failures="0" skipped="15" timestamp="2025-05-23T23:44:47" time="3.486" tests="16">
-    <testcase classname="USER UPDATE - /users/updateMe Should update the user and email" name="USER UPDATE - /users/updateMe Should update the user and email" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="USER UPDATE - /users/updateMe Should update the Photo" name="USER UPDATE - /users/updateMe Should update the Photo" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="HOMEWORK TESTING Reject password update via this route" name="HOMEWORK TESTING Reject password update via this route" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="HOMEWORK TESTING Reject updates without token" name="HOMEWORK TESTING Reject updates without token" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="HOMEWORK TESTING Reject invalid email format" name="HOMEWORK TESTING Reject invalid email format" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="HOMEWORK TESTING Reject requests with an invalid token" name="HOMEWORK TESTING Reject requests with an invalid token" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="HOMEWORK TESTING Successfully update the user and email" name="HOMEWORK TESTING Successfully update the user and email" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="HOMEWORK TESTING Successfully upload profile picture" name="HOMEWORK TESTING Successfully upload profile picture" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="HOMEWORK TESTING Ensure login still works after updates" name="HOMEWORK TESTING Ensure login still works after updates" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="CREATE TOUR async/await Create tour" name="CREATE TOUR async/await Create tour" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="CREATE TOUR async/await Get all tours" name="CREATE TOUR async/await Get all tours" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="CREATE TOUR async/await Get Tour By ID" name="CREATE TOUR async/await Get Tour By ID" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="CREATE TOUR async/await Update Tour" name="CREATE TOUR async/await Update Tour" time="0.215">
-    </testcase>
-    <testcase classname="CREATE TOUR async/await Delete Tour" name="CREATE TOUR async/await Delete Tour" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="CREATE TOUR async/await Get Tours Within a Radius" name="CREATE TOUR async/await Get Tours Within a Radius" time="0">
-      <skipped/>
-    </testcase>
-    <testcase classname="CREATE TOUR async/await Get Distances to All Tours" name="CREATE TOUR async/await Get Distances to All Tours" time="0">
-      <skipped/>
+<testsuites name="jest tests" tests="1" failures="0" errors="0" time="3.938">
+  <testsuite name="MONGODB TESTS FOR TOUR" errors="0" failures="0" skipped="0" timestamp="2025-06-15T18:22:32" time="3.582" tests="1">
+    <testcase classname="MONGODB TESTS FOR TOUR create tour - first version" name="MONGODB TESTS FOR TOUR create tour - first version" time="0.104">
     </testcase>
   </testsuite>
 </testsuites>
