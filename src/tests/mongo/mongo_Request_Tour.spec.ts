@@ -21,4 +21,13 @@ describe('MONGODB TESTS FOR TOUR', () => {
     afterAll(async () => {
         await connection.close();
     })
+
+    it('create tour - first version', async () => {
+        const tours = db.collection('tours');
+        console.log(tours, 'tours');
+
+        //Retrieve the documents in the collection
+        const tour = await tours.findOne({name: "lorem Ipsum0"})
+        console.log(tour, 'tour');
+    })
 })
